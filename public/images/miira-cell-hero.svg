@@ -1,0 +1,66 @@
+<svg width="400" height="500" viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="boxGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6B35;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#DC143C;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F0F0F0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Box Shadow -->
+  <ellipse cx="200" cy="470" rx="140" ry="20" fill="#000000" opacity="0.15" />
+  
+  <!-- Main Product Box -->
+  <rect x="70" y="100" width="260" height="330" rx="20" fill="url(#boxGradient)" />
+  <rect x="75" y="105" width="250" height="320" rx="18" fill="#1F1F1F" opacity="0.3" />
+  
+  <!-- Inner Content Area -->
+  <rect x="90" y="140" width="220" height="260" rx="12" fill="#2A2A2A" opacity="0.6" />
+  
+  <!-- Brand Text -->
+  <text x="200" y="180" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="url(#textGradient)" text-anchor="middle">
+    Miira-Cell+
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="200" y="215" font-family="Arial, sans-serif" font-size="14" fill="#FFFFFF" opacity="0.8" text-anchor="middle">
+    Premium Cellular Wellness
+  </text>
+  
+  <!-- Divider Line -->
+  <line x1="110" y1="235" x2="290" y2="235" stroke="#FF6B35" stroke-width="2" opacity="0.8" />
+  
+  <!-- Feature 1 -->
+  <circle cx="130" cy="270" r="6" fill="#FF6B35" opacity="0.9" />
+  <text x="150" y="275" font-family="Arial, sans-serif" font-size="13" fill="#FFFFFF" opacity="0.85">
+    13 Natural Ingredients
+  </text>
+  
+  <!-- Feature 2 -->
+  <circle cx="130" cy="300" r="6" fill="#FF6B35" opacity="0.9" />
+  <text x="150" y="305" font-family="Arial, sans-serif" font-size="13" fill="#FFFFFF" opacity="0.85">
+    Plant-Based Formula
+  </text>
+  
+  <!-- Feature 3 -->
+  <circle cx="130" cy="330" r="6" fill="#FF6B35" opacity="0.9" />
+  <text x="150" y="335" font-family="Arial, sans-serif" font-size="13" fill="#FFFFFF" opacity="0.85">
+    Cellular Support
+  </text>
+  
+  <!-- Certification Badge -->
+  <circle cx="200" cy="380" r="30" fill="#FFFFFF" opacity="0.15" />
+  <text x="200" y="387" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF" text-anchor="middle">
+    CERTIFIED
+  </text>
+  
+  <!-- Decorative Elements -->
+  <circle cx="110" cy="130" r="8" fill="#FFFFFF" opacity="0.2" />
+  <circle cx="290" cy="410" r="8" fill="#FFFFFF" opacity="0.2" />
+  
+  <!-- Highlight Effect -->
+  <rect x="70" y="100" width="260" height="80" rx="20" fill="url(#textGradient)" opacity="0.1" />
+</svg>
