@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Premium Wellness Color Palette */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 12%;
+    /* Primary: Deep charcoal */
+    --primary: 0 0% 12%;
+    --primary-foreground: 0 0% 100%;
+    /* Secondary: Soft cream */
+    --secondary: 0 0% 97%;
+    --secondary-foreground: 0 0% 12%;
+    /* Muted: Light gray */
+    --muted: 0 0% 88%;
+    --muted-foreground: 0 0% 55%;
+    /* Accent: Premium orange */
+    --accent: 15 95% 52%;
+    --accent-foreground: 0 0% 100%;
+    /* WhatsApp Green */
+    --whatsapp: 132 60% 42%;
+    --whatsapp-foreground: 0 0% 100%;
+    /* Facebook Blue */
+    --facebook: 219 100% 55%;
+    --facebook-foreground: 0 0% 100%;
+    /* Destructive: Red */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 92%;
+    --input: 0 0% 92%;
+    --ring: 15 95% 52%;
+    --chart-1: 15 95% 52%;
+    --chart-2: 0 84.2% 60.2%;
+    --chart-3: 0 0% 12%;
+    --chart-4: 132 60% 42%;
+    --chart-5: 219 100% 55%;
+    --radius: 1rem;
+  }
+  .dark {
+    --background: 0 0% 10%;
+    --foreground: 0 0% 96%;
+    --card: 0 0% 15%;
+    --card-foreground: 0 0% 96%;
+    --popover: 0 0% 15%;
+    --popover-foreground: 0 0% 96%;
+    --primary: 0 0% 96%;
+    --primary-foreground: 0 0% 10%;
+    --secondary: 0 0% 22%;
+    --secondary-foreground: 0 0% 96%;
+    --muted: 0 0% 30%;
+    --muted-foreground: 0 0% 68%;
+    --accent: 15 95% 60%;
+    --accent-foreground: 0 0% 10%;
+    --whatsapp: 132 60% 50%;
+    --whatsapp-foreground: 0 0% 10%;
+    --facebook: 219 100% 60%;
+    --facebook-foreground: 0 0% 10%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 22%;
+    --input: 0 0% 22%;
+    --ring: 15 95% 60%;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .bg-whatsapp {
+    @apply bg-[#25d366];
+  }
+  .text-whatsapp {
+    @apply text-[#25d366];
+  }
+  .bg-facebook {
+    @apply bg-[#1877f2];
+  }
+  .text-facebook {
+    @apply text-[#1877f2];
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
