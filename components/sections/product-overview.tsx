@@ -41,34 +41,34 @@ export default function ProductOverview({ language }: ProductOverviewProps) {
   return (
     <section
       id="product"
-      className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-secondary via-background to-secondary"
+      className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-secondary via-background to-secondary"
     >
       <div className="max-w-5xl mx-auto">
-        <div className="space-y-16">
-          <div className="text-center space-y-6">
-            <h2 className="text-5xl sm:text-6xl font-bold text-foreground text-balance">
+        <div className="space-y-12 sm:space-y-16">
+          <div className="text-center space-y-4 sm:space-y-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground text-balance">
               {t.title}
             </h2>
-            <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
               {t.content}
             </p>
           </div>
 
           {/* Key Differentiator - Premium Card */}
-          <div className="group relative rounded-3xl overflow-hidden">
+          <div className="group relative rounded-2xl sm:rounded-3xl overflow-hidden">
             {/* Gradient border effect */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-accent via-red-600 to-accent opacity-0 group-hover:opacity-100 rounded-3xl blur-xl transition duration-500" />
+            <div className="absolute -inset-1 bg-gradient-to-r from-accent via-red-600 to-accent opacity-0 group-hover:opacity-100 rounded-2xl sm:rounded-3xl blur-xl transition duration-500" />
 
-            <div className="relative bg-gradient-to-br from-accent/10 to-red-600/10 rounded-3xl p-12 border-2 border-accent/30 group-hover:border-accent/60 transition duration-500 shadow-lg">
-              <div className="flex items-start gap-8">
-                <div className="w-24 h-24 bg-gradient-to-br from-accent to-red-600 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-xl group-hover:scale-110 transition duration-500">
-                  <Sparkles className="text-white w-10 h-10" />
+            <div className="relative bg-gradient-to-br from-accent/10 to-red-600/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12 border-2 border-accent/30 group-hover:border-accent/60 transition duration-500 shadow-lg">
+              <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6 lg:gap-8">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-gradient-to-br from-accent to-red-600 rounded-xl sm:rounded-2xl flex items-center justify-center flex-shrink-0 shadow-xl group-hover:scale-110 transition duration-500">
+                  <Sparkles className="text-white w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10" />
                 </div>
                 <div>
-                  <h3 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+                  <h3 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-foreground mb-3 sm:mb-4">
                     {t.highlight}
                   </h3>
-                  <p className="text-lg text-muted-foreground leading-relaxed">
+                  <p className="text-sm sm:text-base lg:text-lg text-muted-foreground leading-relaxed">
                     {t.highlightDesc}
                   </p>
                 </div>
@@ -77,30 +77,32 @@ export default function ProductOverview({ language }: ProductOverviewProps) {
           </div>
 
           {/* Stats Row */}
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
             {/* 13 Ingredients Badge */}
-            <div className="group relative rounded-3xl overflow-hidden bg-gradient-to-br from-foreground to-accent p-12 text-center shadow-lg hover:shadow-2xl transition cursor-pointer transform hover:-translate-y-2">
-              <div className="relative z-10 space-y-3">
-                <p className="text-5xl sm:text-6xl font-bold text-white">13</p>
-                <p className="text-xl font-bold text-white/90">
+            <div className="group relative rounded-2xl sm:rounded-3xl overflow-hidden bg-gradient-to-br from-foreground to-accent p-8 sm:p-10 lg:p-12 text-center shadow-lg hover:shadow-2xl transition cursor-pointer transform hover:-translate-y-2">
+              <div className="relative z-10 space-y-2 sm:space-y-3">
+                <p className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white">
+                  13
+                </p>
+                <p className="text-lg sm:text-xl font-bold text-white/90">
                   {t.stats.ingredientsTitle}
                 </p>
-                <p className="text-sm text-white/70">
+                <p className="text-xs sm:text-sm text-white/70">
                   {t.stats.ingredientsSubtitle}
                 </p>
               </div>
             </div>
 
             {/* Quality Promise */}
-            <div className="group relative rounded-3xl overflow-hidden bg-gradient-to-br from-accent to-red-600 p-12 text-center shadow-lg hover:shadow-2xl transition cursor-pointer transform hover:-translate-y-2">
-              <div className="relative z-10 space-y-3">
+            <div className="group relative rounded-2xl sm:rounded-3xl overflow-hidden bg-gradient-to-br from-accent to-red-600 p-8 sm:p-10 lg:p-12 text-center shadow-lg hover:shadow-2xl transition cursor-pointer transform hover:-translate-y-2">
+              <div className="relative z-10 space-y-2 sm:space-y-3">
                 <div className="flex items-center justify-center">
-                  <Sparkles className="w-10 h-10 text-white" />
+                  <Sparkles className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
                 </div>
-                <p className="text-xl font-bold text-white">
+                <p className="text-lg sm:text-xl font-bold text-white">
                   {t.stats.qualityTitle}
                 </p>
-                <p className="text-sm text-white/80">
+                <p className="text-xs sm:text-sm text-white/80">
                   {t.stats.qualitySubtitle}
                 </p>
               </div>
