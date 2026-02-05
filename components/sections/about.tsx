@@ -39,15 +39,15 @@ export default function About({ language }: AboutProps) {
   return (
     <section
       id="about"
-      className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-secondary"
+      className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-secondary"
     >
       <div className="max-w-5xl mx-auto">
-        <div className="space-y-16">
-          <div className="text-center space-y-6">
-            <h2 className="text-5xl sm:text-6xl font-bold text-foreground text-balance">
+        <div className="space-y-12 sm:space-y-16">
+          <div className="text-center space-y-4 sm:space-y-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground text-balance">
               {t.title}
             </h2>
-            <div className="space-y-4 text-muted-foreground text-lg leading-relaxed whitespace-pre-line max-w-2xl mx-auto">
+            <div className="space-y-4 text-muted-foreground text-base sm:text-lg leading-relaxed whitespace-pre-line max-w-2xl mx-auto">
               {t.content.split("\n").map((paragraph, idx) => (
                 <p key={idx} className="group-hover:text-foreground transition">
                   {paragraph}
@@ -57,7 +57,7 @@ export default function About({ language }: AboutProps) {
           </div>
 
           {/* Stats - Premium Card Design */}
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
             {[
               {
                 label: t.statsLabel.parent,
@@ -77,24 +77,24 @@ export default function About({ language }: AboutProps) {
             ].map((stat, idx) => (
               <div
                 key={idx}
-                className="group relative rounded-3xl overflow-hidden cursor-pointer"
+                className="group relative rounded-2xl sm:rounded-3xl overflow-hidden cursor-pointer"
               >
                 {/* Gradient border effect on hover */}
-                <div className="absolute -inset-1 bg-gradient-to-r from-accent via-red-600 to-accent opacity-0 group-hover:opacity-100 rounded-3xl blur-xl transition duration-500" />
+                <div className="absolute -inset-1 bg-gradient-to-r from-accent via-red-600 to-accent opacity-0 group-hover:opacity-100 rounded-2xl sm:rounded-3xl blur-xl transition duration-500" />
 
-                <div className="relative bg-gradient-to-br from-accent/10 to-red-600/10 rounded-3xl p-8 text-center border-2 border-accent/30 group-hover:border-accent/60 transition-all duration-500 shadow-lg group-hover:shadow-2xl group-hover:-translate-y-2">
+                <div className="relative bg-gradient-to-br from-accent/10 to-red-600/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8 text-center border-2 border-accent/30 group-hover:border-accent/60 transition-all duration-500 shadow-lg group-hover:shadow-2xl group-hover:-translate-y-2">
                   {/* Icon */}
-                  <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-accent/15 flex items-center justify-center group-hover:scale-110 transition duration-300">
-                    <stat.icon className="w-7 h-7 text-accent" />
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 mx-auto mb-3 sm:mb-4 rounded-xl sm:rounded-2xl bg-accent/15 flex items-center justify-center group-hover:scale-110 transition duration-300">
+                    <stat.icon className="w-6 h-6 sm:w-7 sm:h-7 text-accent" />
                   </div>
 
                   {/* Label */}
-                  <p className="text-xs font-bold text-accent mb-3 uppercase tracking-widest">
+                  <p className="text-xs font-bold text-accent mb-2 sm:mb-3 uppercase tracking-widest">
                     {stat.label}
                   </p>
 
                   {/* Value */}
-                  <p className="text-3xl font-bold text-foreground group-hover:text-accent transition duration-300">
+                  <p className="text-2xl sm:text-3xl font-bold text-foreground group-hover:text-accent transition duration-300">
                     {stat.value}
                   </p>
                 </div>
