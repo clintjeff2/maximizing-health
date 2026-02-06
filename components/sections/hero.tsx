@@ -1,6 +1,4 @@
 "use client";
-
-import Image from "next/image";
 import { Button } from "../ui/button";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 
@@ -132,12 +130,13 @@ export default function Hero({ language, onWhatsAppClick }: HeroProps) {
                 <p className="text-white/80 text-sm sm:text-base">
                   13 natural ingredients for daily cellular support
                 </p>
-                <div className="relative h-48 sm:h-64 lg:h-72 w-full">
-                  <Image
-                    src="/images/miira-cell-hero.svg"
-                    alt="Miira-Cell+ product packaging"
-                    fill
-                    className="object-contain drop-shadow-[0_35px_35px_rgba(0,0,0,0.35)]"
+                <div className="relative w-full aspect-video rounded-2xl overflow-hidden border border-white/10 bg-black/30 shadow-[0_30px_60px_rgba(0,0,0,0.45)]">
+                  <iframe
+                    src="https://drive.google.com/file/d/1ILR3r0XqRB9z56fsPdTOFr_t8RNyRKNk/preview"
+                    title="Miira-Cell+ overview video"
+                    className="absolute inset-0 h-full w-full"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
                   />
                 </div>
               </div>
