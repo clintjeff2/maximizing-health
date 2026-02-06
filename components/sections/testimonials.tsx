@@ -1,8 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Star, Play } from "lucide-react";
-import { useState } from "react";
+import { Star } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 
@@ -17,19 +16,42 @@ const translations = {
     videoCaption: "Watch Story",
     videos: [
       {
-        id: "ysz5S6PUM-U",
-        title: "Daily wellness support experience",
-        thumbnail: `https://img.youtube.com/vi/ysz5S6PUM-U/maxresdefault.jpg`,
+        id: "GDUYY8U7rwE",
+        title: "Customer story — renewed daily balance",
+        embedUrl: "https://www.youtube.com/embed/GDUYY8U7rwE?rel=0",
       },
       {
-        id: "jNQXAC9IVRw",
-        title: "Consistent routine and wellbeing",
-        thumbnail: `https://img.youtube.com/vi/jNQXAC9IVRw/maxresdefault.jpg`,
+        id: "PvTt5ELCQ4U",
+        title: "Customer story — consistent vitality",
+        embedUrl: "https://www.youtube.com/embed/PvTt5ELCQ4U?rel=0",
       },
       {
-        id: "ScMzIvxBSi4",
-        title: "Why I chose Miira-Cell+",
-        thumbnail: `https://img.youtube.com/vi/ScMzIvxBSi4/maxresdefault.jpg`,
+        id: "E-k5QPO8thA",
+        title: "Customer story — wellness routine",
+        embedUrl: "https://www.youtube.com/embed/E-k5QPO8thA?rel=0",
+      },
+      {
+        id: "v3bmZWFpjNk",
+        title: "Customer story — daily confidence",
+        embedUrl: "https://www.youtube.com/embed/v3bmZWFpjNk?rel=0",
+      },
+      {
+        id: "drive-15ja_XBLNVcG9FxxUnkfszhRNX8f9MGT4",
+        title: "Customer story — wellness journey",
+        embedUrl:
+          "https://drive.google.com/file/d/15ja_XBLNVcG9FxxUnkfszhRNX8f9MGT4/preview",
+      },
+      {
+        id: "drive-1REZ9J3C5k9NOOk_VnwblcwTr6MWRmCC6",
+        title: "Customer story — balanced days",
+        embedUrl:
+          "https://drive.google.com/file/d/1REZ9J3C5k9NOOk_VnwblcwTr6MWRmCC6/preview",
+      },
+      {
+        id: "drive-1Qu-Y7b3XXY2v8k1Ny_UVco7bQ1Wot67J",
+        title: "Customer story — improved routine",
+        embedUrl:
+          "https://drive.google.com/file/d/1Qu-Y7b3XXY2v8k1Ny_UVco7bQ1Wot67J/preview",
       },
     ],
     imageTestimonials: [
@@ -62,19 +84,42 @@ const translations = {
     videoCaption: "Voir l'histoire",
     videos: [
       {
-        id: "ysz5S6PUM-U",
-        title: "Expérience de bien-être au quotidien",
-        thumbnail: `https://img.youtube.com/vi/ysz5S6PUM-U/maxresdefault.jpg`,
+        id: "GDUYY8U7rwE",
+        title: "Témoignage — équilibre au quotidien",
+        embedUrl: "https://www.youtube.com/embed/GDUYY8U7rwE?rel=0",
       },
       {
-        id: "jNQXAC9IVRw",
-        title: "Routine régulière et bien-être",
-        thumbnail: `https://img.youtube.com/vi/jNQXAC9IVRw/maxresdefault.jpg`,
+        id: "PvTt5ELCQ4U",
+        title: "Témoignage — vitalité constante",
+        embedUrl: "https://www.youtube.com/embed/PvTt5ELCQ4U?rel=0",
       },
       {
-        id: "ScMzIvxBSi4",
-        title: "Pourquoi j'ai choisi Miira-Cell+",
-        thumbnail: `https://img.youtube.com/vi/ScMzIvxBSi4/maxresdefault.jpg`,
+        id: "E-k5QPO8thA",
+        title: "Témoignage — routine bien-être",
+        embedUrl: "https://www.youtube.com/embed/E-k5QPO8thA?rel=0",
+      },
+      {
+        id: "v3bmZWFpjNk",
+        title: "Témoignage — confiance au quotidien",
+        embedUrl: "https://www.youtube.com/embed/v3bmZWFpjNk?rel=0",
+      },
+      {
+        id: "drive-15ja_XBLNVcG9FxxUnkfszhRNX8f9MGT4",
+        title: "Témoignage — parcours bien-être",
+        embedUrl:
+          "https://drive.google.com/file/d/15ja_XBLNVcG9FxxUnkfszhRNX8f9MGT4/preview",
+      },
+      {
+        id: "drive-1REZ9J3C5k9NOOk_VnwblcwTr6MWRmCC6",
+        title: "Témoignage — journées équilibrées",
+        embedUrl:
+          "https://drive.google.com/file/d/1REZ9J3C5k9NOOk_VnwblcwTr6MWRmCC6/preview",
+      },
+      {
+        id: "drive-1Qu-Y7b3XXY2v8k1Ny_UVco7bQ1Wot67J",
+        title: "Témoignage — routine améliorée",
+        embedUrl:
+          "https://drive.google.com/file/d/1Qu-Y7b3XXY2v8k1Ny_UVco7bQ1Wot67J/preview",
       },
     ],
     imageTestimonials: [
@@ -105,7 +150,6 @@ const translations = {
 
 export default function Testimonials({ language }: TestimonialsProps) {
   const t = translations[language];
-  const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
 
   // Carousel for customer images - 2 at a time
   const [emblaRef] = useEmblaCarousel(
@@ -140,47 +184,31 @@ export default function Testimonials({ language }: TestimonialsProps) {
             </h3>
 
             {/* Video Grid */}
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
               {t.videos.map((video) => (
                 <div
                   key={video.id}
-                  onClick={() => setSelectedVideo(video.id)}
-                  className="group relative rounded-3xl overflow-hidden cursor-pointer transform transition-all duration-500 hover:-translate-y-2"
+                  className="group relative rounded-3xl overflow-hidden transform transition-all duration-500 hover:-translate-y-2"
                 >
                   {/* Gradient border effect */}
                   <div className="absolute -inset-1 bg-gradient-to-r from-accent via-red-600 to-accent opacity-0 group-hover:opacity-100 rounded-3xl blur-xl transition duration-500" />
 
                   <div className="relative bg-background border-2 border-border group-hover:border-accent/50 rounded-3xl overflow-hidden shadow-lg group-hover:shadow-2xl transition-all duration-500">
-                    {/* Video Thumbnail */}
                     <div className="relative aspect-video bg-black overflow-hidden">
-                      <Image
-                        src={video.thumbnail}
-                        alt={video.title}
-                        fill
-                        className="object-cover group-hover:scale-110 transition-transform duration-500"
+                      <iframe
+                        src={video.embedUrl}
+                        title={video.title}
+                        className="absolute inset-0 h-full w-full"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-
-                      {/* Play Button */}
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-20 h-20 bg-accent/90 group-hover:bg-accent rounded-full flex items-center justify-center transform group-hover:scale-110 transition-all duration-300 shadow-2xl">
-                          <Play
-                            className="w-10 h-10 text-white ml-1"
-                            fill="white"
-                          />
-                        </div>
-                      </div>
-
-                      {/* Title Overlay */}
-                      <div className="absolute bottom-0 left-0 right-0 p-4">
-                        <p className="text-white font-semibold text-sm leading-tight">
-                          {video.title}
-                        </p>
-                      </div>
                     </div>
 
                     {/* Caption */}
                     <div className="bg-background dark:bg-slate-900 p-4 text-center">
+                      <p className="text-foreground font-semibold text-sm mb-1">
+                        {video.title}
+                      </p>
                       <p className="text-accent font-bold text-sm uppercase tracking-wider">
                         {t.videoCaption}
                       </p>
@@ -256,33 +284,6 @@ export default function Testimonials({ language }: TestimonialsProps) {
           </div>
         </div>
       </div>
-
-      {/* Video Modal */}
-      {selectedVideo && (
-        <div
-          className="fixed inset-0 z-50 bg-black/90 backdrop-blur-sm flex items-center justify-center p-4"
-          onClick={() => setSelectedVideo(null)}
-        >
-          <div
-            className="relative w-full max-w-5xl aspect-video rounded-2xl overflow-hidden shadow-2xl"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <iframe
-              src={`https://www.youtube.com/embed/${selectedVideo}?autoplay=1`}
-              title="Video testimonial"
-              className="absolute inset-0 h-full w-full"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-            <button
-              onClick={() => setSelectedVideo(null)}
-              className="absolute -top-12 right-0 text-white hover:text-accent transition text-sm font-semibold"
-            >
-              {language === "en" ? "Close (ESC)" : "Fermer (ESC)"}
-            </button>
-          </div>
-        </div>
-      )}
     </section>
   );
 }
